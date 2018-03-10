@@ -5,6 +5,9 @@ $(document).ready(function() {
     var total = 0;
     var userNumber = parseInt($("input#userInput").val());
     var numberArray = [];
+    var li = $("<li>").appendTo("#result");
+    var json = { numbers: numberArray}
+    //var $resultContainer = $("#result");
 
     for (index = 1; index <= userNumber; index += 1) {
       if (index % 3 === 0 && index % 5 === 0) {
@@ -17,9 +20,19 @@ $(document).ready(function() {
         numberArray.push(index);
       }
     }
-    numberArray.map(function(list) {
-      $(".result").append('<li>' + list +'<li>');
+
+    $(json.numbers).map(function(index, item) {
+      li.append($(document.createElement("li")).text(item));
     });
+
+    // $.map(numberArray, function(index, value) {
+    //   var $li = $("<li/>").html(value).appendTo($resultContainer).hide();
+    // });
+    //
+    // $("li", $resultContainer).slideDown(1500);
+    // numberArray.map(function(list) {
+    //   $(".result").append('<li>' + list +'<li>');
+    // });
 
   });
 });
