@@ -21,6 +21,7 @@ $(document).ready(function() {
       }
     }
 
+
     $(json.numbers).map(function(index, item) {
       li.append($(document.createElement("li")).text(item));
     });
@@ -31,7 +32,7 @@ $(document).ready(function() {
     //
     // $("li", $resultContainer).slideDown(1500);
     // numberArray.map(function(list) {
-    //   $(".result").append('<li>' + list +'<li>');
+    //   $("#result").append('<li>' + list +'<li>');
     // });
 
   });
