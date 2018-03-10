@@ -7,9 +7,12 @@ $(document).ready(function() {
     var numberArray = [];
 
     for (index = 1; index <= userNumber; index += 1) {
-      numberArray.push(index);
-    };
-
+      if (index % 3 === 0) {
+        numberArray.push("ping");
+      } else {
+        numberArray.push(index);
+      }
+    }
     numberArray.map(function(list) {
       $(".result").append("<li>" + list + "<li>")
     });
