@@ -9,6 +9,8 @@ $(document).ready(function() {
     for (index = 1; index <= userNumber; index += 1) {
       if (index % 3 === 0) {
         numberArray.push("ping");
+      } else if (index % 5 === 0) {
+        numberArray.push("pong");
       } else {
         numberArray.push(index);
       }
